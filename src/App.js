@@ -1,8 +1,8 @@
 import React from 'react';
-import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import {BrowserRouter, Route} from 'react-router-dom'
 import Menu from './components/menu' 
 import Users from './components/users/index'
-
+import Publicaciones from './components/publicaciones/index'
 
 
 
@@ -16,8 +16,12 @@ const App = () => (
  <BrowserRouter>
 
 	<Menu/>
-	<Route exact path= "/" component={Users}/>
-	<Route exact path= "/tareas" component={Tareas}/>
+
+		<div className="margen">
+			<Route exact path= "/" component={Users}/>
+			<Route exact path= "/tareas" component={Tareas}/>
+			<Route exact path = "/publicaciones/:key" component={Publicaciones}/>
+		</div>
 	
  </BrowserRouter>
 
